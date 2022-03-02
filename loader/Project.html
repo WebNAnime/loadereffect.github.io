@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            display: -webkit-flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: black;
+        }
+
+        .rotate {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            animation: rotate 2s linear infinite;
+            border: 13px solid white;
+            cursor: pointer;
+            position: absolute;
+            right: 45%;
+        }
+
+        .rotate0 {
+            height: 180px;
+            width: 180px;
+            border-radius: 50%;
+            animation: rotate0 2s linear infinite;
+            border: 13px solid white;
+            cursor: pointer;
+            position: absolute;
+            z-index: 2;
+            left: 45%;
+        }
+
+        .text {
+            color: white;
+            position: absolute;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+            cursor: pointer;
+            text-shadow: 0 0 20px white;
+
+        }
+
+        @keyframes rotate {
+            0% {
+                border-top: 3px solid transparent;
+                border-bottom: 3px solid transparent;
+                border-left: 3px solid transparent;
+                transform: rotate(0deg);
+
+            }
+
+            100% {
+                border-top: 3px solid transparent;
+                border-bottom: 3px solid transparent;
+                border-left: 3px solid transparent;
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes rotate0 {
+            0% {
+                border-top: 3px solid transparent;
+                border-bottom: 3px solid transparent;
+                border-right: 3px solid transparent;
+                transform: rotate(0deg);
+
+            }
+
+            100% {
+                border-top: 3px solid transparent;
+                border-bottom: 3px solid transparent;
+                border-right: 3px solid transparent;
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rotate0"></div>
+    <div class="text">Web N Anime</div>
+    <div class="rotate"></div>
+</body>
+
+</html>
